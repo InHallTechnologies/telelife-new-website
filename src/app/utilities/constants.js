@@ -1,0 +1,1 @@
+export const PARA_FONT_SIZE = '1.2rem'

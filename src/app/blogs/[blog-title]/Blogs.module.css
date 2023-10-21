@@ -1,0 +1,54 @@
+.blogsContainer {
+    padding: 0 8%;
+    margin-bottom: 40px;
+}
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px;
+    border-radius: 10px;
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.homeTitle {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.blogMainContainer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.blogsContentContainer {
+    flex: 1;
+}
+
+.moreBlogContainer {
+    flex-direction: 0.3;
+}
+
+.blogTitle {
+    margin-bottom: 0;
+    font-size: 2.3rem;
+}
+
+.blogImage {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.blogContent {
+    margin-top: 16px;
+}

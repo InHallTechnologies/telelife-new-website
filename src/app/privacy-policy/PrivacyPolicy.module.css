@@ -1,0 +1,26 @@
+.pageContainer {
+    padding: 0 8%;
+}
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px;
+    border-radius: 10px;
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.homeTitle {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}

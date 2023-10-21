@@ -1,0 +1,19 @@
+.aboutTelelifeContainer {
+    padding: 48px 8%;
+    background-color: white;
+}
+
+.aboutItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutListContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 52px;
+    grid-gap: 28px;
+    padding-bottom: 36px;
+}

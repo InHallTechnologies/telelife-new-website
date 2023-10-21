@@ -1,0 +1,19 @@
+.mainContainer {
+    position: relative;
+}
+.backgroundGradient {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    min-height: 110vh;
+    z-index: -1;
+    background: rgba(51, 173, 38, 0.1);
+    background: linear-gradient(
+        90deg,
+        rgba(51, 173, 38, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    filter: blur(8px);
+}

@@ -1,0 +1,165 @@
+.contactUsContainer {
+    display: flex;
+}
+
+.greenBar {
+    background-color: #4d5822;
+    width: 20vw;
+    min-height: 100vh;
+    height: 100%;
+    padding: 0px 30px;
+    color: white;
+    flex: 0.2;
+}
+
+.greenTitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+.greenContent {
+    color: white;
+    font-size: 1rem;
+}
+
+.footerLinkItemContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.footerLinkItemData {
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.footerLinkItemData:hover {
+    font-weight: 600;
+    color: white;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+}
+
+.footerSocialIconYoutube {
+    width: 21.5px;
+}
+
+.footerSocialIcon {
+    width: 20px;
+}
+
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.contactUsMainContent {
+    padding: 0 30px;
+    flex: 0.8;
+}
+
+.sectionTitle {
+    color: #444;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.emailId {
+    font-weight: bold;
+    color: #4d5822;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.horizontalControl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px;
+    border-radius: 10px;
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.homeTitle {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.buttonContainer {
+   
+    display: flex;
+}
+
+.button,
+.button:hover,
+.button:active,
+.button:focus {
+    background-color: #3e5020;
+    min-width: 150px;
+    margin-left: auto;
+    border: none;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 1390px) {
+    .greenBar {
+        flex: 0.3;
+    }
+
+    .contactUsMainContent {
+        flex: 0.7;
+    }
+}
+
+@media (max-width: 968px) {
+    .greenBar {
+        flex: 0.4;
+    }
+
+    .contactUsMainContent {
+        flex: 0.6;
+    }
+}
+
+@media (max-width: 714px) {
+    .contactUsContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .greenBar {
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,37 @@
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+}
+
+.navList {
+    list-style-type: none;
+    display: flex;
+    gap: 28px;
+}
+
+.hamburgContainer {
+    display: none;
+}
+
+@media (max-width: 863px) {
+    .navContainer {
+        display: none;
+    }
+
+    .hamburgContainer {
+        display: flex;
+    }
+
+    .sliderContainer {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 20;
+    }
+}

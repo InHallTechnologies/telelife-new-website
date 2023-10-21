@@ -1,0 +1,72 @@
+.heroContainer {
+    padding: 20px 8%;
+}
+
+.carouselContainer {
+    display: flex;
+}
+
+.carouselItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carouselTitle {
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: #444;
+}
+
+.illusContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 550px;
+}
+
+.dataContainer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 12px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.dataItemContainer {
+    background-color: rgba(0, 0, 0, 0.541);
+    background-blend-mode: color-burn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+@media (max-width: 1254px) {
+    .carouselItemContainer {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .carouselTitle {
+        width: 100%;
+    }
+    .illusContainer {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .dataContainer {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 612px) {
+    .illusContainer {
+        width: 100%;
+        height: 300px;
+    }
+}
