@@ -1,24 +1,23 @@
 "use client";
 import React from "react";
 import Styles from "./Footer.module.css";
+import { useRouter } from "next/navigation";
 
 const FooterSection = () => {
-
+    const router = useRouter();
     const handlePDFClick = (type) => _ => {
         let url = ""
         if (type === "PP") {
-            url = "https://firebasestorage.googleapis.com/v0/b/teli-life-medi-care-fb.appspot.com/o/Privacy%20Policy.pdf?alt=media&token=9228287f-9ff9-413e-833d-490bac1da2b2"
+            url = "/privacy-policy"
         }
         if (type === "TNC") {
-            url = "https://firebasestorage.googleapis.com/v0/b/teli-life-medi-care-fb.appspot.com/o/Terms%20and%20Conditions.pdf?alt=media&token=7e6bcc1c-f229-4f75-af93-ac69bcd4f0cf"
+            url = "/terms-of-service"
         }
         if (type === "CRP") {
-            url = "https://firebasestorage.googleapis.com/v0/b/teli-life-medi-care-fb.appspot.com/o/Cancellation%20%26%20Refund%20Policy.pdf?alt=media&token=c48f0840-6ae7-4d30-9cde-ea20d9030de7"
+            url = "/cancellation-policy"
+
         }
-        const sample = document.createElement("a");
-        sample.setAttribute("href", url)
-        sample.setAttribute("target", "_blank")
-        sample.click();
+        router.push(url)
     }
 
     return (

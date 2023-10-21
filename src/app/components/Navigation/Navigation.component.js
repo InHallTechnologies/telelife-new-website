@@ -7,14 +7,16 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { Typography } from "@mui/material";
 import { GrClose } from 'react-icons/gr';
 
-const Navigation = () => {
+const Navigation = ({ homeRef, aboutRef, mediaRef, ourReachRef, blogsRef }) => {
     const [showSlider, setShowSlider] = useState(false);
 
     const handleToggle = _ => setShowSlider(!showSlider);
 
     return (
         <div className={Styles.navigationContainer}>
-            <img src="/logo.svg" alt="Telelife Medicare Private Limited" />
+            <Link href="/">
+                <img src="/logo.svg" alt="Telelife Medicare Private Limited" />
+            </Link>
 
             <nav className={Styles.navContainer}>
                 <ul className={Styles.navList}>
@@ -22,16 +24,16 @@ const Navigation = () => {
                         <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Home</Link>
                     </motion.li>
                     <motion.li>
-                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>About Us</Link>
+                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#about-us'>About Us</Link>
                     </motion.li>
                     <motion.li>
-                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Media</Link>
+                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#media-awareness'>Media</Link>
                     </motion.li>
                     <motion.li>
-                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Our Reach</Link>
+                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#our-reach'>Our Reach</Link>
                     </motion.li>
                     <motion.li>
-                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Blogs</Link>
+                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#blogs'>Blogs</Link>
                     </motion.li>
                     <motion.li>
                         <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Contact Us</Link>
@@ -52,21 +54,24 @@ const Navigation = () => {
                                     <GrClose size={20} onClick={handleToggle} />
                                 </div>
                                 <div style={{ padding: 12, display: 'flex', marginTop: "20px", flexDirection: 'column', gap: 20, alignItems: 'center' }}>
-                                    <div className={Styles.sliderItemContainer}>
+                                    <Link href='#' className={Styles.sliderItemContainer}>
                                         <Typography>Home</Typography>
-                                    </div>
-                                    <div className={Styles.sliderItemContainer}>
+                                    </Link>
+                                    <Link href='#about-us' className={Styles.sliderItemContainer}>
                                         <Typography>About Us</Typography>
-                                    </div>
-                                    <div className={Styles.sliderItemContainer}>
+                                    </Link>
+                                    <Link href='#media-awareness' className={Styles.sliderItemContainer}>
                                         <Typography>Media</Typography>
-                                    </div>
-                                    <div className={Styles.sliderItemContainer}>
+                                    </Link>
+                                    <Link href='#our-reach' className={Styles.sliderItemContainer}>
                                         <Typography>Our Reach</Typography>
-                                    </div>
-                                    <div className={Styles.sliderItemContainer}>
+                                    </Link>
+                                    <Link href='#blogs' className={Styles.sliderItemContainer}>
+                                        <Typography>Blogs</Typography>
+                                    </Link>
+                                    <Link href="/contact-us" className={Styles.sliderItemContainer}>
                                         <Typography>Contact Us</Typography>
-                                    </div>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </motion.div>

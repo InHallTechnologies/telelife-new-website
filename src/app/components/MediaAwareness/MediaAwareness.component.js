@@ -11,7 +11,7 @@ import { PARA_FONT_SIZE } from "@/app/utilities/constants";
 const MediaAwareness = () => {
 
     return (
-        <div className={Styles.mediaAwarenessContainer}>
+        <div id="media-awareness" className={Styles.mediaAwarenessContainer}>
             <SectionTitle
                 title="Media Awareness"
                 subTitle="Reach Us. Follow Us!"

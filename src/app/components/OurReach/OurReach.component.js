@@ -45,7 +45,7 @@ const OurReach = () => {
     }, [selectedItem])
 
     return (
-        <div className={Styles.ourReachContainer}>
+        <div id="our-reach" className={Styles.ourReachContainer}>
             <SectionTitle
                 title="Our Reach"
                 subTitle="20+ in Maharashtra"

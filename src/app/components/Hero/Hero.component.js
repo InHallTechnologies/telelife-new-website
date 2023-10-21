@@ -11,7 +11,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { PARA_FONT_SIZE } from "@/app/utilities/constants";
 
 
-const Hero = () => {
+const Hero = ({ ref }) => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const animations = [
@@ -39,7 +39,7 @@ const Hero = () => {
 
 
     return (
-        <div className={Styles.heroContainer}>
+        <div ref={ref} className={Styles.heroContainer}>
             <div className={Styles.carouselContainer}>
                 <AnimatePresence mode='popLayout'>
                     {

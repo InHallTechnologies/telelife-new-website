@@ -10,10 +10,6 @@ const Blog = async ({ params }) => {
     const blog = await fetchBlogs(blogSlug);
 
 
-
-
-
-
     return (
         <div >
             <title>{blog.blogTitle} | Telelife Medicare</title>

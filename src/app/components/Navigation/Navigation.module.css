@@ -15,6 +15,11 @@
     display: none;
 }
 
+.sliderItemContainer {
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width: 863px) {
     .navContainer {
         display: none;

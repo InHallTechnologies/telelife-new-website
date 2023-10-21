@@ -7,7 +7,7 @@ import { Stack, Typography } from "@mui/material";
 import { PARA_FONT_SIZE } from "@/app/utilities/constants";
 import { useInView, motion, AnimatePresence } from "framer-motion";
 
-const AboutTelelife = () => {
+const AboutTelelife = ({ ref }) => {
 
     const containerRef = useRef();
     const inView = useInView(containerRef, { once: true });
@@ -32,7 +32,8 @@ const AboutTelelife = () => {
     ]
 
     return (
-        <div ref={containerRef} className={Styles.aboutTelelifeContainer}>
+        <div id="about-us" ref={containerRef} className={Styles.aboutTelelifeContainer}>
+            <div ref={ref} />
             <SectionTitle
                 title="About Telelife"
                 subTitle="Who are we? What do we do?"

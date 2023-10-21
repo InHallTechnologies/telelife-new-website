@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Styles from './Blogs.module.css';
 import SectionTitle from "../SectionTitle/SectionTitle.component";
@@ -6,10 +5,10 @@ import { onValue, ref } from "firebase/database";
 import { firebaseDatabase } from "@/backend/firebaseHandler";
 import { Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 
 const Blogs = async () => {
-    const router = useRouter();
     const blogsRef = ref(firebaseDatabase, `/BLOGS_ARCHIVE`);
     const BlogsPromose = new Promise((resolve, reject) => {
         onValue(blogsRef, dataSnapshot => {
@@ -21,7 +20,7 @@ const Blogs = async () => {
 
 
     return (
-        <div className={Styles.blogsContainer}>
+        <div id="blogs" className={Styles.blogsContainer}>
             <SectionTitle
                 title="Blogs"
                 subTitle="Read more!"
@@ -31,11 +30,11 @@ const Blogs = async () => {
                 {
                     data.map(item => {
                         return (
-                            <div onClick={_ => router.push(item.slug)} className={Styles.blogContentContainer} key={item.key}>
+                            <Link href={`blogs/${item.slug}`} className={Styles.blogContentContainer} key={item.key}>
                                 <img className={Styles.itemBlogImage} src={item.blogImage} />
                                 <Typography sx={{ marginTop: 2 }} variant='h5'>{item.blogTitle}</Typography>
                                 <Typography sx={{ marginTop: 1 }}>{item.subContent}</Typography>
-                            </div>
+                            </Link>
                         )
                     })
                 }
