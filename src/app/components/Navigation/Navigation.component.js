@@ -36,7 +36,7 @@ const Navigation = ({ homeRef, aboutRef, mediaRef, ourReachRef, blogsRef }) => {
                         <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#blogs'>Blogs</Link>
                     </motion.li>
                     <motion.li>
-                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='#'>Contact Us</Link>
+                        <Link style={{ textDecoration: 'none', color: '#444', fontWeight: 700 }} href='/contact-us'>Contact Us</Link>
                     </motion.li>
                 </ul>
             </nav>
