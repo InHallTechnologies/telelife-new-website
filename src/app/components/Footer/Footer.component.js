@@ -27,7 +27,7 @@ const FooterSection = () => {
 
                     <div>
                         <img className={Styles.footerIcon} src="/whiteLogo.png" />
-                        <p className={Styles.footerContentHeadlines}>Bapusaheb Deshmukh Complex, Main Road Palus, G.N. 2435, 1, Dist, Palus, Maharashtra 416310</p>
+                        <p className={Styles.footerContentHeadlines}>Bapusaheb Deshmukh Complex, Main Road Palus, G.N. 2435/1, Tehsil: Palus, District: Sangli, Maharashtra 416310.</p>
                     </div>
 
                     <div>

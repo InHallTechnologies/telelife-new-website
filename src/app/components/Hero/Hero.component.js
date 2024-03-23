@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Styles from './Hero.module.css';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -27,7 +26,16 @@ const Hero = ({ ref }) => {
 
     ]
 
+    const CalculateTime = (time) => {
+        const mins = Math.floor(time / 60);
+        const secs = time - mins * 60;
+        //you can calculate milliseconds etc...
+        return (mins, secs);
+    }
+
     useEffect(() => {
+
+        console.log(CalculateTime(100))
         const timeout = setTimeout(() => {
             setCurrentIndex((currentIndex + 1) % 3)
         }, 5000);
@@ -40,13 +48,15 @@ const Hero = ({ ref }) => {
 
     return (
         <div ref={ref} className={Styles.heroContainer}>
+            <motion.div initial={{ x: -2000, }} animate={{ x: 0, filter: "blur(0px)", transition: { delay: 1, duration: 2 } }} className={Styles.backgroundGradient} />
+
             <div className={Styles.carouselContainer}>
-                <AnimatePresence mode='popLayout'>
+                
                     {
                         animations.map((item, index) => {
                             if (currentIndex === index) {
                                 return (
-                                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { ease: 'linear', duration: 1.5 } }} exit={{ opacity: 0 }} className={Styles.carouselItemContainer} key={index.toString()} >
+                                    <motion.div  key={index.toString()} animate={{ opacity: 1, transition: { ease: 'linear', duration: 0.5 } }} exit={{ opacity: 0, transition: { duration: 0.3 } }} className={Styles.carouselItemContainer}  >
                                         <Stack gap='20px'>
                                             <div style={{ width: 200, height: 3, backgroundColor: '#ccc', borderRadius: 10 }} />
                                             <div className={Styles.carouselTitle} dangerouslySetInnerHTML={{ __html: item.title }} />
@@ -61,13 +71,11 @@ const Hero = ({ ref }) => {
                                             />
                                         </div>
                                     </motion.div>
-
                                 )
                             }
 
                         })
                     }
-                </AnimatePresence>
             </div>
 
             <div className={Styles.dataContainer}>
